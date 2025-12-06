@@ -32,7 +32,7 @@ class MainActivityIntegrationTest {
         onView(withId(R.id.etNumber)).perform(typeText("10"))
         onView(withId(R.id.btnGo)).perform(click())
 
-        // Assert intent passed [cite: 25]
+        // Assert intent passed
         intended(hasComponent(SecondActivity::class.java.name))
         intended(hasExtra("COUNT", 10))
 

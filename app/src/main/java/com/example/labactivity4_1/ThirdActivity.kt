@@ -13,7 +13,6 @@ class ThirdActivity : AppCompatActivity() {
         val tvResult = findViewById<TextView>(R.id.tvResult)
 
         val app = application as LabApplication
-        // Use TextProvider to format the string [cite: 27]
         tvResult.text = app.textProvider.getResultText(clickedText)
     }
 }

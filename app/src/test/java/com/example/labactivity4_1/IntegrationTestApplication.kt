@@ -1,6 +1,6 @@
 package com.example.labactivity4_1
 
-// This app class is used during Robolectric tests [cite: 37]
+
 class IntegrationTestApplication : LabApplication() {
     override fun onCreate() {
         super.onCreate()

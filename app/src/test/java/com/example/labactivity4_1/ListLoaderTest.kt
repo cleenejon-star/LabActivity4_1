@@ -7,13 +7,13 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import org.robolectric.RobolectricTestRunner
 
-@RunWith(RobolectricTestRunner::class) // Needed for Handler/Looper mock
+@RunWith(RobolectricTestRunner::class)
 @SmallTest
 class ListLoaderTest {
     @Test
     fun testLoadItems() {
         val loader = ListLoader()
-        // Note: Robolectric automatically handles the Looper main thread delay instantly
+
         loader.loadItems(3) { list ->
             assertEquals(3, list.size)
             assertEquals("Item 0", list[0].text)

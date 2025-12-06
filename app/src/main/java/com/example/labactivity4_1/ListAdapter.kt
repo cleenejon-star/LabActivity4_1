@@ -16,7 +16,6 @@ class ListAdapter(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        // Using simple_list_item_1 built-in layout
         val view = LayoutInflater.from(parent.context)
             .inflate(android.R.layout.simple_list_item_1, parent, false)
         return ViewHolder(view)

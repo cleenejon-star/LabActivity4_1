@@ -16,11 +16,11 @@ class SecondActivity : AppCompatActivity() {
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
-        // Load items using the helper class [cite: 30]
+        // Load items using the helper class
         app.listLoader.loadItems(count) { items ->
             recyclerView.adapter = ListAdapter(items) { clickedItem ->
                 val intent = Intent(this, ThirdActivity::class.java)
-                intent.putExtra("CLICKED_TEXT", clickedItem.text) // [cite: 8]
+                intent.putExtra("CLICKED_TEXT", clickedItem.text)
                 startActivity(intent)
             }
         }
